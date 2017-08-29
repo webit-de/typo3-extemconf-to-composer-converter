@@ -16,11 +16,13 @@ if(false === is_dir($argv[1])) {
 $_EXTKEY = basename($argv[1]);
 require($argv[1] . 'ext_emconf.php');
 $emconf = $EM_CONF[$_EXTKEY];
-$vendor = ($argv[2] ?? 'your-vendorname');
+
+$vendor = ucwords($argv[2] ?? 'Your-Vendorname', '-_ ') ;
+$package = preg_replace('/[_ ]/', '-', strtolower($vendor . '/' . $_EXTKEY));
 $namespace = $vendor . '\\' . preg_replace('/[^A-Za-z0-9]/', '', ucwords($_EXTKEY, '-_ ')) . '\\';
 
 $composer = [
-    'name' => strtolower($vendor) . '/' . $_EXTKEY,
+    'name' => $package,
     'description' => $emconf['title'] . ($emconf['description']? ' – ' . $emconf['description'] : ''),
     'license' => 'GPL-2.0+',
     'type' => 'typo3-cms-extension',
