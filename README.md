@@ -15,7 +15,9 @@ Requirements
 Installation
 -------------
 
-Clone the git repository and run the script.
+Clone the git repository or use Composer and run the script.
+
+    composer create-project webit-de/typo3-extemconf-to-composer-converter
 
 License
 -------
