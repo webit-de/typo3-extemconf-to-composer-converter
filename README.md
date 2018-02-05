@@ -22,7 +22,7 @@ Clone the git repository or use Composer and run the script.
 License
 -------
 
-GNU General Public License version 2
+GNU General Public License version 2 or later
 
 The GNU General Public License can be found at http://www.gnu.org/copyleft/gpl.html.
 
