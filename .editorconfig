@@ -57,6 +57,6 @@ indent_size = 4
 indent_style = space
 indent_size = 2
 
-[{composer.json}]
+[{composer.json,composer.lock}]
 indent_style = space
 indent_size = 4

@@ -1,8 +1,9 @@
 {
     "name": "webit-de/typo3-extemconf-to-composer-converter",
     "description": "Convert the ext_emconf.php file of a TYPO3 extension into a composer.json file",
-    "type": "project",
+    "homepage": "https://github.com/webit-de/typo3-extemconf-to-composer-converter",
     "license": "GPL-2.0-or-later",
+    "type": "project",
     "authors": [
         {
             "name": "Dan Untenzu",
