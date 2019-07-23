@@ -18,9 +18,12 @@ if(empty($argv[1])) {
 if(false === is_dir($argv[1])) {
     die('No valid path');
 }
+if(true === is_file($argv[1] . 'composer.json')) {
+    die('composer.json already exists');
+}
 
 $_EXTKEY = basename($argv[1]);
-require($argv[1] . 'ext_emconf.php');
+require $argv[1] . 'ext_emconf.php';
 $emconf = $EM_CONF[$_EXTKEY];
 
 $vendor = ucwords($argv[2] ?? 'Your-Vendorname', '-_ ') ;
@@ -45,5 +48,9 @@ $composer = [
 ];
 $output = json_encode($composer, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
 
-echo $output . PHP_EOL;
+file_put_contents($argv[1] . 'composer.json', $output);
+
+echo 'Converted ext_emconf.php into composer.json.' . PHP_EOL;
+echo 'Adopt the file to your own needs (eg. modify dependencies)' . PHP_EOL;
+
 exit(1);
