@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2019-07-23 Dan Untenzu <untenzu@webit.de>
+
+  * 2.0.0
+  * FEATURE Write composer.json directly
+
 2018-02-05 Dan Untenzu <untenzu@webit.de>
 
   * 1.2.0
