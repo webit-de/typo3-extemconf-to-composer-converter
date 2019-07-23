@@ -36,6 +36,7 @@ $composer = [
     'license' => 'GPL-2.0+',
     'type' => 'typo3-cms-extension',
     'require' => [
+        'php' => '>=7.0.0',
         'typo3/cms-core' => '^7.6 || ^8.7'
     ],
     'autoload' => [
