@@ -3,7 +3,13 @@
  * Convert a TYPO3 extension declaration file (ext_emconf.php) to a
  * Composer file (composer.json)
  *
- *   php convert-extemconf-to-composer.php /path/to/extension/ > /path/to/extension/composer.json
+ * Example usage
+ *
+ *   php convert-extemconf-to-composer.php /path/to/extension/
+ *
+ * Example with given Composer vendorname
+ *
+ *   php convert-extemconf-to-composer.php /path/to/extension/ Your-Vendorname
  */
 
 if(empty($argv[1])) {
